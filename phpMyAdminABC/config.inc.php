@@ -27,13 +27,14 @@ $i = 0;
 $i++;
 /* Authentication type */
 $cfg['Servers'][$i]['auth_type'] = 'config';
-$cfg['Servers'][$i]['user'] = 'b3b6f7652d3cbd';
-$cfg['Servers'][$i]['password'] = 'c3115111';
+$cfg['Servers'][$i]['user'] = 'f1q1p2lfw99698du';
+$cfg['Servers'][$i]['password'] = 'texgbjt6n8iqe8ob';
 /* Server parameters */
-$cfg['Servers'][$i]['host'] = 'us-cdbr-iron-east-01.cleardb.net';
+$cfg['Servers'][$i]['host'] = 'x3ztd854gaa7on6s.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = true;
 
+//mysql://f1q1p2lfw99698du:texgbjt6n8iqe8ob@x3ztd854gaa7on6s.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/yx0ggx28hv17q6mr
 /**
  * phpMyAdmin configuration storage settings.
  */
