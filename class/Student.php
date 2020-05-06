@@ -15,7 +15,7 @@ class Student
         $this->name = $name;
         $this->username = $username;
         $this->password = $password;
-        $this->dbconn = new DB();
+        $this->dbconn = (new DB())->conn;
     }
 
     public function save(){
