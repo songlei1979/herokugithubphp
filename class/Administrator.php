@@ -37,8 +37,8 @@ class Administrator
         if ($result->num_rows > 0){
             $students = array(); //for transfer data, I use objects array
             while ($row = $result->fetch_row()){
-                echo $row['id'];
                 $student = new Student($row['id'], $row['name'], $row['username'], $row['password']);
+                $student = new Student(1, '1', '1', '1');
                 array_push($students, $student);
             }
             return $students;
