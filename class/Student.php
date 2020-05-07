@@ -3,11 +3,11 @@ include_once "DB.php";
 
 class Student
 {
-    var $id;
-    var $name;
-    var $username;
-    var $password;
-    var $dbconn;
+    public $id;
+    public $name;
+    public $username;
+    public $password;
+    private $dbconn;
 
     public function __construct($id, $name, $username, $password)
     {
