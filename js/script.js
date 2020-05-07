@@ -7,6 +7,7 @@ $(document).ready(function () {
         posting.done(function( data ) {
             console.log(data);
             $("#loginDiv").hide();
+            $('#logoutDiv').show();
         });
     }) ;
 
