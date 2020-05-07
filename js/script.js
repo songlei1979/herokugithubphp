@@ -10,7 +10,7 @@ $(document).ready(function () {
             $('#logoutDiv').show();
             i = 0;
             while (i<data.length){
-                $('#availablepages').append('<p><a href="api/'+data[i][1]+'">'+data[i][0]+'</a></p>');
+                $('#availablepages').append('<p><a href="api/'+data[i].url+'">'+data[i].name+'</a></p>');
                 i = i+1;
             }
 

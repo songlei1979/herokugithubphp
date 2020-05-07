@@ -11,8 +11,14 @@ if (isset($_POST['username'])){
         session_start();
         $_SESSION['admin_id'] = $admin->id;
         $links = array();
-        array_push($links, ['List students', 'liststudents.php']);
-        array_push($links, ['List lectures', 'listlectures.php']);
+        $link=new stdClass();
+        $link->name = 'List Student';
+        $link->url = 'liststudents.php';
+        array_push($links, $link);
+        $link=new stdClass();
+        $link->name = 'List lectures';
+        $link->url = 'listlectures.php';
+        array_push($links, $link);
         echo json_encode($links);
     }
 
