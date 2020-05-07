@@ -3,7 +3,7 @@ include_once "class/Administrator.php";
 if (isset($_POST['username'])){
     $username = $_POST['username'];
     $pwd = $_POST['password'];
-    //$admin = new Administrator();
+    $admin = new Administrator();
     echo "pass";
 //    $admin->login();
 //    if (!is_null($admin->id )){

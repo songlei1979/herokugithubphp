@@ -31,18 +31,18 @@ class Administrator
 //        }
     }
 
-    public function showStudents(){
-        $query = "select * from student";
-        $result = mysqli_query($this->conn, $query);
-        if ($result->num_rows > 0){
-            $students = array(); //for transfer data, I use objects array
-            while ($row = $result->fetch_row()){
-                $student = new Student($row['id'], $row['name'], $row['username'], $row['password']);
-                array_push($students, $student);
-            }
-            return $students;
-        }else{
-            return null;
-        }
-    }
+//    public function showStudents(){
+//        $query = "select * from student";
+//        $result = mysqli_query($this->conn, $query);
+//        if ($result->num_rows > 0){
+//            $students = array(); //for transfer data, I use objects array
+//            while ($row = $result->fetch_row()){
+//                $student = new Student($row['id'], $row['name'], $row['username'], $row['password']);
+//                array_push($students, $student);
+//            }
+//            return $students;
+//        }else{
+//            return null;
+//        }
+//    }
 }
