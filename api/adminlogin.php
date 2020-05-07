@@ -11,4 +11,7 @@ if (isset($_POST['username'])){
         echo "<p><a href='liststudents.php'>List students</a></p>";
     }
 
+}else{
+    $msg = json_encode("wrong login");
+    echo $msg;
 }
