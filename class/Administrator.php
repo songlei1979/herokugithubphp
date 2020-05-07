@@ -3,8 +3,8 @@ include_once ("DB.php");
 include_once ("Student.php");
 class Administrator
 {
-    var $id;
-    var $username;
+    public $id;
+    public $username;
     private $password;
     private $conn;
 //from beginning, I don't need any inforamtion, I only create a connection to database for login user
