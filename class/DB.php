@@ -17,6 +17,8 @@ class DB
         $conn = new mysqli($this->servername, $this->dbusername, $this->dbpassword, $this->dbname);
         if (!$conn->connect_error){
             $this->conn =$conn;
+        }else{
+            echo $conn->connect_error;
         }
     }
 }
