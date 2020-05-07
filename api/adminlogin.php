@@ -6,8 +6,7 @@ if (isset($_POST['username'])){
     $username = $_POST['username'];
     $pwd = $_POST['password'];
     $admin = new Administrator();
-    echo "pass1";
-    $admin->login();
+    $admin->login($username, $pwd);
     if (!is_null($admin->id )){
         session_start();
         $_SESSION['admin_id'] = $admin->id;
