@@ -1,9 +1,9 @@
 <?php
-include_once "class/Administrator.php";
+//include_once "class/Administrator.php";
 if (isset($_POST['username'])){
     $username = $_POST['username'];
     $pwd = $_POST['password'];
-    $admin = new Administrator();
+//    $admin = new Administrator();
     echo $username;
     echo $pwd;
 //    $admin->login();
