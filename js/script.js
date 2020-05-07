@@ -8,6 +8,11 @@ $(document).ready(function () {
             console.log(data);
             $("#loginDiv").hide();
             $('#logoutDiv').show();
+            i = 0;
+            while (i<data.length){
+                $('#availablepages').append('<p><a href="api/'+data[1]+'">'+data[0]+'</a></p>');
+            }
+
         });
     }) ;
 
