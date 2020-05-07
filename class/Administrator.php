@@ -17,17 +17,18 @@ class Administrator
     public function login($username, $password){
         //1. I check his username
         $query = "select * from administrator where username = '$username'";
-        $result = mysqli_query($this->dbconn, $query);
-        if ($result->num_rows == 1){ //2. if there is a record, I will check his password
-            while ($row = $result->fetch_assoc()){
-                if ($row['password'] == $password){
-                    //3. if username and password are correct, I set information to this administrator login
-                    $this->id = $row['id'];
-                    $this->username = $username;
-                    $this->password = $password;
-                }
-            }
-        }
+        echo $query;
+//        $result = mysqli_query($this->dbconn, $query);
+//        if ($result->num_rows == 1){ //2. if there is a record, I will check his password
+//            while ($row = $result->fetch_assoc()){
+//                if ($row['password'] == $password){
+//                    //3. if username and password are correct, I set information to this administrator login
+//                    $this->id = $row['id'];
+//                    $this->username = $username;
+//                    $this->password = $password;
+//                }
+//            }
+//        }
     }
 
     public function showStudents(){
