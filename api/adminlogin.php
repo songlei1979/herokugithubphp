@@ -7,12 +7,12 @@ if (isset($_POST['username'])){
     $pwd = $_POST['password'];
     $admin = new Administrator();
     echo "pass1";
-//    $admin->login();
-//    if (!is_null($admin->id )){
-//        session_start();
-//        $_SESSION['admin_id'] = $admin->id;
-//        echo "<p><a href='liststudents.php'>List students</a></p>";
-//    }
+    $admin->login();
+    if (!is_null($admin->id )){
+        session_start();
+        $_SESSION['admin_id'] = $admin->id;
+        echo "<p><a href='liststudents.php'>List students</a></p>";
+    }
 
 }else{
     $msg = json_encode("wrong login");
