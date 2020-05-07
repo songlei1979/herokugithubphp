@@ -11,7 +11,10 @@ if (isset($_POST['username'])){
     if (!is_null($admin->id )){
         session_start();
         $_SESSION['admin_id'] = $admin->id;
-        echo "<p><a href='liststudents.php'>List students</a></p>";
+        $links = array();
+        array_push($links, ['List students', 'liststudents.php']);
+        array_push($links, ['List lectures', 'listlectures.php']);
+        echo json_encode($links);
     }
 
 }else{
