@@ -4,7 +4,7 @@ if (isset($_POST['username'])){
     $username = $_POST['username'];
     $pwd = $_POST['password'];
     $admin = new Administrator();
-    echo "pass";
+    echo "pass1";
 //    $admin->login();
 //    if (!is_null($admin->id )){
 //        session_start();
