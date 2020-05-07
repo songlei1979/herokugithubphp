@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-include_once "class/Administrator.php";
+include_once "../class/Administrator.php";
 if (isset($_POST['username'])){
     $username = $_POST['username'];
     $pwd = $_POST['password'];
