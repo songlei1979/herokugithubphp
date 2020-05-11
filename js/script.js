@@ -32,6 +32,7 @@ function showStudents() {
                 $("#studentsTable").append("<tr><td>"+data[i].id+"</td>" +
                     "<td>"+ data[i].name +"</td>" +
                     "<td>"+ data[i].username +"</td></tr>");
+                i = i+1;
             }
 
         },
