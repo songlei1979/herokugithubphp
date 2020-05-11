@@ -9,9 +9,11 @@
     ?>
     <script>
         $(document).ready(function () {
+            url1 = "api/apiStudent.php?id="+<?php echo $studentID;?>;
+            console.log(url1);
             $.ajax({
                 type:'GET',
-                url:"api/apiStudent.php?id="+<?php echo $studentID;?>,
+                url:url1,
                 dataType: "JSON",
                 success: function (data) {
                     console.log(data);
