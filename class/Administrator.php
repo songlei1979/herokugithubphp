@@ -48,6 +48,7 @@ class Administrator
     }
 
     public function showStudent($id){
+        echo "query:";
         $query = "select * from student where id="+$id;
         echo "query:"+$query;
         $result = mysqli_query($this->conn, $query);
