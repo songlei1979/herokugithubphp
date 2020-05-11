@@ -46,4 +46,17 @@ class Administrator
             return null;
         }
     }
+
+    public function showStudent($id){
+        $query = "select * from student where id="+$id;
+        $result = mysqli_query($this->conn, $query);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()){
+                $student = new Student($row['id'], $row['name'], $row['username'], $row['password']);
+                return $student;
+            }
+
+        }
+
+    }
 }

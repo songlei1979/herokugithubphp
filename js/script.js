@@ -29,7 +29,7 @@ function showStudents() {
             console.log(data);
             i = 0;
             while (i<data.length){
-                $("#studentsTable").append("<tr><td>"+data[i].id+"</td>" +
+                $("#studentsTable").append("<tr><td><a href='studentInformation.php?id="+data[i].id+"'>"+data[i].id+"</a></td>" +
                     "<td>"+ data[i].name +"</td>" +
                     "<td>"+ data[i].username +"</td></tr>");
                 i = i+1;
