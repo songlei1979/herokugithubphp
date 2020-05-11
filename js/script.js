@@ -18,25 +18,25 @@ $(document).ready(function () {
         });
     }) ;
 
-    function showStudents() {
-        $.ajax({
-            type:'GET',
-            url:"api/liststudents.php",
-            dataType: "JSON",
-            success: function (data) {
-                console.log(data);
-                i = 0;
-                while (i<data.length){
-                    $("#studentsTable").append("<tr><td>"+data[i].id+"</td>" +
-                        "<td>"+ data[i].name +"</td>" +
-                        "<td>"+ data[i].username +"</td></tr>");
-                }
-
-                },
-            error: function () {
-                alert("Not connected");
-            }
-        });
-    }
-
 });
+
+function showStudents() {
+    $.ajax({
+        type:'GET',
+        url:"api/liststudents.php",
+        dataType: "JSON",
+        success: function (data) {
+            console.log(data);
+            i = 0;
+            while (i<data.length){
+                $("#studentsTable").append("<tr><td>"+data[i].id+"</td>" +
+                    "<td>"+ data[i].name +"</td>" +
+                    "<td>"+ data[i].username +"</td></tr>");
+            }
+
+        },
+        error: function () {
+            alert("Not connected");
+        }
+    });
+}
