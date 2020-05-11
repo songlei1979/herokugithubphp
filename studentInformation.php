@@ -25,6 +25,18 @@
                     $("#studentUsername").dblclick(function () {
                         $("#studentUsername").prop('readonly', false);
                     });
+                    $("#save").click(function () {
+                        newName = $("#studentName").val();
+                        newUsername = $("#studentUsername").val();
+
+                        url = "http://herokugitphpleisong.herokuapp.com/api/apiUpdateStudent.php";
+                        posting = $.post( url, { id:<?php echo $studentID;?>, name: newName, username: newUsername} );
+                        posting.done(function( data ) {
+                            alert("changed");
+
+                        });
+
+                    });
                 },
                 error: function () {
                     alert("Not connected");
@@ -38,7 +50,7 @@
 <div id="studentInfoDiv">
     <p>Name: <input type="text" id="studentName" readonly></p>
     <p>Username: <input type="text" id="studentUsername" readonly></p>
-    <p><button>Save</button></p>
+    <p><button id="save">Save</button></p>
 </div>
 </body>
 </html>
