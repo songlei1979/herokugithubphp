@@ -13,7 +13,7 @@ if (isset($_POST['username'])){
         $links = array();
         $link=new stdClass();
         $link->name = 'List Student';
-        $link->url = 'liststudents.php';
+        $link->url = 'listStudents.html';
         array_push($links, $link);
         $link=new stdClass();
         $link->name = 'List lectures';
