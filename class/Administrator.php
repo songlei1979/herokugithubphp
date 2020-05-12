@@ -66,7 +66,7 @@ class Administrator
     }
 
     public function removeStudent($id){
-        $query = "delete student where id=".$id;
+        $query = "delete from student where id=".$id;
         mysqli_query($query);
     }
 }
