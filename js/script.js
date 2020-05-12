@@ -36,7 +36,19 @@ function showStudents() {
             }
 
             $(".deleteBtn").click(function () {
-                $(this).parent().parent().remove();
+                studentID = $(this).attr("deleteid");
+                $(this).parent().parent().remove(); //I need to remove the table row
+                    $.ajax({
+                        type: 'GET',
+                        url: "api/apiRemoveStudent.php?id="+studentID,
+                        dataType: "JSON",
+                        success: function (data) {
+                            alert("This student has been deleted");
+                        },
+                        error: function () {
+                            alert("Not connected");
+                        }
+                    });
             });
 
         },

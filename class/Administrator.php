@@ -64,4 +64,9 @@ class Administrator
         $query = "update student SET name = '$name', username = '$username' where id=".$id;
         mysqli_query($this->conn, $query);
     }
+
+    public function removeStudent($id){
+        $query = "delete student where id=".$id;
+        mysqli_query($query);
+    }
 }
