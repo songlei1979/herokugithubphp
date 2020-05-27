@@ -1,6 +1,15 @@
 <?php
+/**
+ * Author: ...
+ * Date: ...
+ * Version: ...
+ * Purpose:...
+ */
 include_once "DB.php";
 
+/**
+ * Class Student
+ */
 class Student
 {
     public $id;
@@ -19,16 +28,16 @@ class Student
     }
 
     public function save(){
-        //if I don't have this object in my database, I will register him first
-        $this->dbconn = (new DB())->conn;
-        if (is_null($this->id)){
-            $query = "insert into student values (null, '$this->name', '$this->username', '$this->password')";
-            mysqli_query($this->dbconn, $query);
-        }else{
-            $query = "Update student SET name = '$this->name' where id = $this->id";
-            mysqli_query($query);
-        }
-        $this->dbconn->close();
+        $query = "insert into your_tablename values ('$this->name','','')";
     }
+
+    public function edit(){
+
+    }
+
+    public function delete(){
+
+    }
+
 
 }
